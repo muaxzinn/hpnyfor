@@ -539,7 +539,7 @@ function startMainAnimations() {
 
 function fetchDailyContent() {
     // TODO: User must replace this URL after deploying the script
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxuO-n651W84pHPhHmF5hLuG_ayGb5qHayYpU2vw7roNXnkhW29b6BTfqYUJ2X5KV0v/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbye1zPMaOhKmj8pofX53Pt9vw6-reCvWhZrY5x25VO_pFEXx6feBCcEZ8IHgtYNhI94/exec';
 
     if (GOOGLE_SCRIPT_URL.includes('REPLACE')) {
         if (window.hnyData) renderPosts();
@@ -770,4 +770,5 @@ window.nextChatStep = function () {
         chatIndex++;
     }
 }
+
 
