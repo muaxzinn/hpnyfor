@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;600&family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flower_style.css">
+</head>
+
+<body class="theme-cute">
+
+    <!-- Loading / Intro Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+
+            <!-- Stage 0: Cute Loading Screen -->
+            <div id="loading-screen">
+                <div class="loader-content">
+                    <i class="ph-fill ph-heart feature-icon loading-heart"></i>
+                    <p class="loading-text">Loading Happiness...</p>
+                </div>
+            </div>
+
+            <!-- Fireworks Intro (Hidden Initially) -->
+            <div id="game-ui" class="hidden">
+                <h2 class="game-instruction">Light up the sky!</h2>
+                <!-- Score removed as requested -->
+                <div class="click-zone-hint">Tap anywhere to launch</div>
+            </div>
+
+            <!-- Wish Screen (Hidden Initially) -->
+            <!-- Message Screen (Hidden Initially, replaces Wish) -->
+            <div id="wish-ui" class="hidden">
+                <h2 class="wish-title">Happy New Year 2026</h2>
+                <p class="intro-msg-text">
+                    May this year bring you joy, success,<br>and everything you've ever hoped for.
+                </p>
+                <button id="enter-site-btn" class="wish-btn">
+                    Open Gift <i class="ph-fill ph-gift"></i>
+                </button>
+            </div>
+
+            <!-- Stage 3: Flower Gift (Hidden Initially) -->
+            <div id="flower-gift-ui" class="hidden">
+                <div class="night"></div>
+                <h1 class="flower-title"><span id="flower-title-text"></span></h1>
+                <div class="flowers">
+                    <div class="flower flower--1">
+                        <div class="flower__leafs flower__leafs--1">
+                            <div class="flower__leaf flower__leaf--1"></div>
+                            <div class="flower__leaf flower__leaf--2"></div>
+                            <div class="flower__leaf flower__leaf--3"></div>
+                            <div class="flower__leaf flower__leaf--4"></div>
+                            <div class="flower__white-circle"></div>
+                            <div class="flower__light flower__light--1"></div>
+                            <div class="flower__light flower__light--2"></div>
+                            <div class="flower__light flower__light--3"></div>
+                            <div class="flower__light flower__light--4"></div>
+                            <div class="flower__light flower__light--5"></div>
+                            <div class="flower__light flower__light--6"></div>
+                            <div class="flower__light flower__light--7"></div>
+                            <div class="flower__light flower__light--8"></div>
+                        </div>
+                        <div class="flower__line">
+                            <div class="flower__line__leaf flower__line__leaf--1"></div>
+                            <div class="flower__line__leaf flower__line__leaf--2"></div>
+                            <div class="flower__line__leaf flower__line__leaf--3"></div>
+                            <div class="flower__line__leaf flower__line__leaf--4"></div>
+                            <div class="flower__line__leaf flower__line__leaf--5"></div>
+                            <div class="flower__line__leaf flower__line__leaf--6"></div>
+                        </div>
+                    </div>
+                    <!-- Flower 2 & 3 simplified for brevity but essential -->
+                    <div class="flower flower--2">
+                        <div class="flower__leafs flower__leafs--2">
+                            <div class="flower__leaf flower__leaf--1"></div>
+                            <div class="flower__leaf flower__leaf--2"></div>
+                            <div class="flower__leaf flower__leaf--3"></div>
+                            <div class="flower__leaf flower__leaf--4"></div>
+                            <div class="flower__white-circle"></div>
+                            <div class="flower__light flower__light--1"></div>
+                            <div class="flower__light flower__light--2"></div>
+                            <div class="flower__light flower__light--3"></div>
+                            <div class="flower__light flower__light--4"></div>
+                            <div class="flower__light flower__light--5"></div>
+                            <div class="flower__light flower__light--6"></div>
+                            <div class="flower__light flower__light--7"></div>
+                            <div class="flower__light flower__light--8"></div>
+                        </div>
+                        <div class="flower__line">
+                            <div class="flower__line__leaf flower__line__leaf--1"></div>
+                            <div class="flower__line__leaf flower__line__leaf--2"></div>
+                            <div class="flower__line__leaf flower__line__leaf--3"></div>
+                            <div class="flower__line__leaf flower__line__leaf--4"></div>
+                        </div>
+                    </div>
+                    <div class="flower flower--3">
+                        <div class="flower__leafs flower__leafs--3">
+                            <div class="flower__leaf flower__leaf--1"></div>
+                            <div class="flower__leaf flower__leaf--2"></div>
+                            <div class="flower__leaf flower__leaf--3"></div>
+                            <div class="flower__leaf flower__leaf--4"></div>
+                            <div class="flower__white-circle"></div>
+                            <div class="flower__light flower__light--1"></div>
+                            <div class="flower__light flower__light--2"></div>
+                            <div class="flower__light flower__light--3"></div>
+                            <div class="flower__light flower__light--4"></div>
+                            <div class="flower__light flower__light--5"></div>
+                            <div class="flower__light flower__light--6"></div>
+                            <div class="flower__light flower__light--7"></div>
+                            <div class="flower__light flower__light--8"></div>
+                        </div>
+                        <div class="flower__line">
+                            <div class="flower__line__leaf flower__line__leaf--1"></div>
+                            <div class="flower__line__leaf flower__line__leaf--2"></div>
+                            <div class="flower__line__leaf flower__line__leaf--3"></div>
+                            <div class="flower__line__leaf flower__line__leaf--4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="intro-canvas"></canvas>
+
+            <!-- Chat Overlay (Hidden Initially) -->
+            <div id="chat-overlay" class="hidden">
+                <div class="chat-container" id="chat-box"></div>
+                <div class="chat-controls" id="chat-controls"></div>
+                <button class="close-chat" onclick="closeChat()" title="Close Chat" aria-label="Close Chat">
+                    <i class="ph-bold ph-x"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Audio (Place your 'bgm.mp3' in the 'audio' folder) -->
+    <audio id="bgm" loop>
+        <source src="audio/1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" data-theme="theme-cute" title="Cute"><i class="ph-fill ph-heart"></i></button>
+        <button class="theme-btn" data-theme="theme-elegant" title="Elegant"><i class="ph-fill ph-sparkle"></i></button>
+        <button class="theme-btn" data-theme="theme-minimal" title="Minimal"><i class="ph-fill ph-circle"></i></button>
+        <button class="theme-btn" data-theme="theme-cool" title="Cool"><i class="ph-fill ph-lightning"></i></button>
+    </div>
+
+    <!-- Music Control -->
+    <button id="music-toggle" class="music-btn" title="Toggle Music">
+        <i class="ph-fill ph-speaker-simple-high"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hny-title">Happy New Year</h1>
+
+                <div class="time-container">
+                    <p class="time-label">Time passed in 2025</p>
+                    <div class="timer-grid">
+                        <div class="time-unit">
+                            <span id="days">365</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="time-unit">
+                            <span id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span id="minutes">00</span>
+                            <span class="label">Minutes</span>
+                        </div>
+                        <div class="time-unit">
+                            <span id="seconds">00</span>
+                            <span class="label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="hero-submessage" style="font-family: 'Mali', cursive;">
+                    อยากบอกว่าแกเก่งมากๆเลยนะที่อดทนผ่านทุกๆวินาทีของปีนี้มาได้ภูมิใจจิงๆเก่งที่สุดเลยคับคนนี้</p>
+
+                <!-- Special Post Button (Hidden initially, swaps with Ready button) -->
+                <a href="special_post.html" id="special-btn" class="special-post-btn hidden">
+                    มีโพสที่อยากให้ดูด้วยแหละ <i class="ph-fill ph-instagram-logo"></i>
+                </a>
+
+                <button class="ready-btn">
+                    Ready to walk into 2026? <i class="ph-bold ph-arrow-down"></i>
+                </button>
+            </div>
+
+            <!-- Canvas for Particles/Fireworks -->
+            <canvas id="hero-canvas"></canvas>
+        </section>
+
+        <!-- Daily Posts Section -->
+        <section id="posts" class="timeline-section hidden">
+            <h2 class="section-title">Your 2025 Journey</h2>
+            <div class="timeline-container" id="timeline">
+                <!-- Javascript will inject posts here -->
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section">
+            <h2 class="section-title">Send a Message</h2>
+            <form id="message-form">
+                <textarea placeholder="Write something..." required></textarea>
+                <button type="submit">Send <i class="ph-bold ph-paper-plane-right"></i></button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
